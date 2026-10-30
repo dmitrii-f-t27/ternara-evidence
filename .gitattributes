@@ -1,0 +1,3 @@
+# Recorded file bytes must survive Windows core.autocrlf=true checkouts.
+* text=auto eol=lf
+*.wasm binary
