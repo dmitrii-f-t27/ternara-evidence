@@ -1,0 +1,55 @@
+{
+  "schema": "ternara-physical-repeat/1",
+  "date": "2026-10-30",
+  "system": {
+    "cpu": "Apple M4",
+    "architecture": "arm64",
+    "os": "macOS",
+    "os_version": "27.0.1",
+    "runtime": "Node v26.12.0"
+  },
+  "hardware": {
+    "board": "AX7203",
+    "fpga": "XC7A200T",
+    "transport": "direct local Ethernet from second Mac; no M1 network relay"
+  },
+  "kit_archive_sha256": "bb85473fad8993d332c375a863eeabf048ad46dc23b5b035927df35d0c3f39d8",
+  "firmware": {
+    "version": "ternara-ax7203-mac32-2026.10.30-r1",
+    "image_sha256": "1a7269139a7e46b6d2e45b9b75a8bbab2016db90d2cf36c4c545ae8cda435914",
+    "provenance": "controlled SRAM-only load on privately DNA-matched board; DONE and CRC status checked after testing",
+    "flash_written": false,
+    "continuous_readback": false
+  },
+  "software_replay": {
+    "cases": 256,
+    "mismatches": 0,
+    "status": "passed",
+    "scope": "private t27 kernel on actual M4; software replay is separate from physical run"
+  },
+  "physical": {
+    "suite_cases": 256,
+    "mismatches": 0,
+    "private_keyed_receipts_verified": 256,
+    "additional_single_case_passed": true,
+    "independent_python_math_and_receipt_recheck": true,
+    "tag_mutants_refused": 257,
+    "status": "passed"
+  },
+  "public_arithmetic_dataset": {
+    "file": "data/mac32-cross-platform-2026-10-30.json",
+    "sha256": "e06d8d00a9e8429d1e81ff26cee77ab1843c0a656f7b0c742a4ce2559eb1a1f3",
+    "all_256_input_expected_actual_rows_identical": true,
+    "scope": "public replay checks arithmetic, not physical provenance or private authentication tags"
+  },
+  "limits": {
+    "independent_third_party_operator": false,
+    "same_owner_and_board_as_previous_runs": true,
+    "complete_model_inference": false,
+    "asic_performance_established": false,
+    "energy_saving_established": false,
+    "private_firmware_published": false,
+    "keys_or_device_identifiers_published": false
+  },
+  "verification_finished_at": "2026-10-30T20:31:37.923518+00:00"
+}

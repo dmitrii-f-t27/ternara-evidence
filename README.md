@@ -35,6 +35,7 @@ See [REPRODUCING.md](REPRODUCING.md) for source-to-artifact commands.
 |---|---|
 | Owner's macOS ARM64 private-kit replay | 256/256 passed, 30 October 2026 |
 | Actual RunPod Linux x86-64 private-kit replay | 256/256 passed, 30 October 2026 |
+| Second Mac: Apple M4, direct Ethernet + SRAM/JTAG | 256/256 matched; 256 keyed receipts independently rechecked; [dated result](experiments/2026-10-30-m4-direct.json) |
 | AX7203 job controlled locally by macOS | 256/256 matched; local keyed receipt verification |
 | AX7203 job controlled by RunPod | 256/256 matched; SSH relay to macOS Ethernet and local keyed receipt verification |
 | Public t27/Python CI on Windows, Linux and macOS | See the actual [Actions runs](https://github.com/dmitrii-f-t27/ternara-evidence/actions/workflows/verify.yml); no unrun job is considered passed |
