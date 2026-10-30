@@ -1,0 +1,29 @@
+// SPDX-License-Identifier: MIT
+// Public arithmetic reference only. This is not the FPGA implementation.
+module TernaraPublicReference;
+
+pub fn mac32_ref(wlo: u32, whi: u32, xlo: u32, xhi: u32) -> i32 {
+    var w: u64 = (wlo as u64) + (whi as u64) * 4294967296;
+    var x: u64 = (xlo as u64) + (xhi as u64) * 4294967296;
+    var sum: i32 = 0;
+    var lane: u32 = 0;
+    while (lane < 32) {
+        var a: i32 = 0;
+        var b: i32 = 0;
+        if ((w & 3) == 1) { a = 1; }
+        if ((w & 3) == 2) { a = 0 - 1; }
+        if ((x & 3) == 1) { b = 1; }
+        if ((x & 3) == 2) { b = 0 - 1; }
+        sum = sum + a * b;
+        w = w / 4;
+        x = x / 4;
+        lane = lane + 1;
+    }
+    return sum;
+}
+
+test zeros given got = mac32_ref(0,0,0,0) when want = 0 then got == want
+test positives given got = mac32_ref(1431655765,1431655765,1431655765,1431655765) when want = 32 then got == want
+test negatives given got = mac32_ref(1431655765,1431655765,2863311530,2863311530) when want = 0 - 32 then got == want
+test negative_pair given got = mac32_ref(2863311530,2863311530,2863311530,2863311530) when want = 32 then got == want
+test highest_lane given got = mac32_ref(0,1073741824,0,2147483648) when want = 0 - 1 then got == want

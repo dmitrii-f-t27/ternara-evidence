@@ -1,0 +1,1862 @@
+{
+  "schema": "ternara-mac32-evidence/1",
+  "date": "2026-10-30",
+  "module": "MAC32",
+  "lanes": 32,
+  "encoding": {
+    "0": 0,
+    "1": 1,
+    "2": -1
+  },
+  "accepted_firmware_version": "ternara-ax7203-mac32-2026.10.30-r1",
+  "firmware_sha256": "1a7269139a7e46b6d2e45b9b75a8bbab2016db90d2cf36c4c545ae8cda435914",
+  "kit_archive_sha256": "bb85473fad8993d332c375a863eeabf048ad46dc23b5b035927df35d0c3f39d8",
+  "matrix": [
+    {
+      "system": "macOS",
+      "architecture": "arm64",
+      "runtime": "Node24.13.0",
+      "software_replay": {
+        "cases": 256,
+        "mismatches": 0,
+        "status": "passed"
+      },
+      "physical": {
+        "cases": 256,
+        "mismatches": 0,
+        "status": "passed",
+        "transport": "local Ethernet"
+      }
+    },
+    {
+      "system": "Linux",
+      "architecture": "x86_64",
+      "runtime": "Node24.13.0",
+      "container": "node:24.13.0-bookworm-slim",
+      "software_replay": {
+        "cases": 256,
+        "mismatches": 0,
+        "status": "passed"
+      },
+      "physical": {
+        "cases": 256,
+        "mismatches": 0,
+        "status": "passed",
+        "transport": "RunPod SSH controller; macOS local Ethernet relay; keyed receipt verification on macOS"
+      }
+    },
+    {
+      "system": "Windows/WSL2",
+      "architecture": "not qualified",
+      "software_replay": {
+        "status": "not tested"
+      },
+      "physical": {
+        "status": "not tested"
+      }
+    }
+  ],
+  "claims": {
+    "public_arithmetic_replay": true,
+    "independently_rechecked_private_hardware_receipts": 256,
+    "public_hardware_attestation": false,
+    "direct_linux_usb_or_jtag_qualified": false,
+    "continuous_sram_readback": false,
+    "full_model_inference": false,
+    "performance_or_energy_benchmark": false
+  },
+  "results": [
+    {
+      "case": 0,
+      "w_u64_hex": "0000000000000000",
+      "x_u64_hex": "0000000000000000",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 1,
+      "w_u64_hex": "5555555555555555",
+      "x_u64_hex": "5555555555555555",
+      "expected": 32,
+      "actual": 32
+    },
+    {
+      "case": 2,
+      "w_u64_hex": "5555555555555555",
+      "x_u64_hex": "aaaaaaaaaaaaaaaa",
+      "expected": -32,
+      "actual": -32
+    },
+    {
+      "case": 3,
+      "w_u64_hex": "aaaaaaaaaaaaaaaa",
+      "x_u64_hex": "aaaaaaaaaaaaaaaa",
+      "expected": 32,
+      "actual": 32
+    },
+    {
+      "case": 4,
+      "w_u64_hex": "66944112664a2455",
+      "x_u64_hex": "84a0248985609aa4",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 5,
+      "w_u64_hex": "a52000546294a652",
+      "x_u64_hex": "2419a286a4805921",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 6,
+      "w_u64_hex": "20489a61a1204598",
+      "x_u64_hex": "626541002018246a",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 7,
+      "w_u64_hex": "689459aa29480015",
+      "x_u64_hex": "618100496265a664",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": 8,
+      "w_u64_hex": "6a21282468a48212",
+      "x_u64_hex": "a9199a46a98145a1",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 9,
+      "w_u64_hex": "a559a621a6015158",
+      "x_u64_hex": "286559802919002a",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 10,
+      "w_u64_hex": "25a5656aa6591895",
+      "x_u64_hex": "6682280924458204",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "case": 11,
+      "w_u64_hex": "500104a411a5aa92",
+      "x_u64_hex": "a62aa60662925149",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 12,
+      "w_u64_hex": "505a86a150016918",
+      "x_u64_hex": "91466540922a1886",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 13,
+      "w_u64_hex": "9aa6512a985a0455",
+      "x_u64_hex": "109204891946aa80",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": 14,
+      "w_u64_hex": "190610641a868652",
+      "x_u64_hex": "5828849618926909",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 15,
+      "w_u64_hex": "5562a26115124598",
+      "x_u64_hex": "9644521054280546",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 16,
+      "w_u64_hex": "94886aaa516a1015",
+      "x_u64_hex": "1590915596544440",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 17,
+      "w_u64_hex": "9214a92490845012",
+      "x_u64_hex": "1108605212a00689",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 18,
+      "w_u64_hex": "026048210a102258",
+      "x_u64_hex": "50552a9851089106",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 19,
+      "w_u64_hex": "4988066a0a68a995",
+      "x_u64_hex": "9aa1a91548555000",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 20,
+      "w_u64_hex": "841595a445944892",
+      "x_u64_hex": "0a09481288a12249",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 21,
+      "w_u64_hex": "044154a184210a18",
+      "x_u64_hex": "055506580609a986",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": 22,
+      "w_u64_hex": "0299222a00498515",
+      "x_u64_hex": "45a2959545654880",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 23,
+      "w_u64_hex": "4125a12442955452",
+      "x_u64_hex": "8002549281820a09",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 24,
+      "w_u64_hex": "894260614a251698",
+      "x_u64_hex": "026a2218881a8506",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 25,
+      "w_u64_hex": "289a0aaaa942a595",
+      "x_u64_hex": "4a86a1150a665440",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 26,
+      "w_u64_hex": "262689a424aa6012",
+      "x_u64_hex": "4910605266821689",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 27,
+      "w_u64_hex": "6652582164060258",
+      "x_u64_hex": "a4680898a518a586",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 28,
+      "w_u64_hex": "a1a8166aa2528165",
+      "x_u64_hex": "20848a9520646100",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 29,
+      "w_u64_hex": "2104a664a9a848a2",
+      "x_u64_hex": "6210591220900049",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 30,
+      "w_u64_hex": "685065a129041828",
+      "x_u64_hex": "a94914586a288246",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 31,
+      "w_u64_hex": "6aa8202a64509a25",
+      "x_u64_hex": "a995a655a9454980",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 32,
+      "w_u64_hex": "a605820496886562",
+      "x_u64_hex": "2421659225951809",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 33,
+      "w_u64_hex": "11514141121524a8",
+      "x_u64_hex": "6649201814219a06",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 34,
+      "w_u64_hex": "5089188a116186a5",
+      "x_u64_hex": "9296821550496540",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 35,
+      "w_u64_hex": "98159a8458894122",
+      "x_u64_hex": "9122415292a62489",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 36,
+      "w_u64_hex": "9a62190198158068",
+      "x_u64_hex": "185a989819024696",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": 37,
+      "w_u64_hex": "158aa44a16625265",
+      "x_u64_hex": "58a65a95555a0110",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 38,
+      "w_u64_hex": "55166644158a19a2",
+      "x_u64_hex": "9600291254a68059",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 39,
+      "w_u64_hex": "906205814126a828",
+      "x_u64_hex": "1558a45892005256",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 40,
+      "w_u64_hex": "8298840a80426a25",
+      "x_u64_hex": "11a4646502581990",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 41,
+      "w_u64_hex": "0a28520408980562",
+      "x_u64_hex": "480006a24984a919",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 42,
+      "w_u64_hex": "49441241462484a8",
+      "x_u64_hex": "8869852888106816",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 43,
+      "w_u64_hex": "8490918a454044a5",
+      "x_u64_hex": "0685502584690650",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 44,
+      "w_u64_hex": "0429688481981222",
+      "x_u64_hex": "4511126206858599",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 45,
+      "w_u64_hex": "02452a0100059168",
+      "x_u64_hex": "416991a841114496",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 46,
+      "w_u64_hex": "4aa1894a6a516065",
+      "x_u64_hex": "808668a581691210",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 47,
+      "w_u64_hex": "a9094444aaa92aa2",
+      "x_u64_hex": "0a122a22a8969159",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 48,
+      "w_u64_hex": "24561681a50589a8",
+      "x_u64_hex": "6a4a89682a226056",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 49,
+      "w_u64_hex": "64a2958a24524825",
+      "x_u64_hex": "65964465664a2a90",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "case": 50,
+      "w_u64_hex": "620a500460aa0662",
+      "x_u64_hex": "a42416a2a1968999",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 51,
+      "w_u64_hex": "a1562241a21a9568",
+      "x_u64_hex": "204095a821204816",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 52,
+      "w_u64_hex": "2980a14aa96654a5",
+      "x_u64_hex": "6298502528480650",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 53,
+      "w_u64_hex": "6818488419802622",
+      "x_u64_hex": "a92420626aa49559",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 54,
+      "w_u64_hex": "566408015418a108",
+      "x_u64_hex": "a951a268a6005596",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 55,
+      "w_u64_hex": "96809a0a92644145",
+      "x_u64_hex": "14a949a515592410",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 56,
+      "w_u64_hex": "1119154412808082",
+      "x_u64_hex": "5205882250a56219",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 57,
+      "w_u64_hex": "5065948119294a88",
+      "x_u64_hex": "92515a2850010156",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 58,
+      "w_u64_hex": "9891669a59451905",
+      "x_u64_hex": "19aa15659a598090",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 59,
+      "w_u64_hex": "9629211494919842",
+      "x_u64_hex": "190694a2198a4a99",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 60,
+      "w_u64_hex": "1546805116296648",
+      "x_u64_hex": "546266a855161916",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 61,
+      "w_u64_hex": "4112425a42462585",
+      "x_u64_hex": "968a212554629850",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 62,
+      "w_u64_hex": "806a19944192a402",
+      "x_u64_hex": "02148062828a6669",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 63,
+      "w_u64_hex": "08869811880a4208",
+      "x_u64_hex": "416042680a1425a6",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 64,
+      "w_u64_hex": "0a205a1a08560145",
+      "x_u64_hex": "488819a549608420",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 65,
+      "w_u64_hex": "4548255446a09082",
+      "x_u64_hex": "8814992284984229",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 66,
+      "w_u64_hex": "8594a49145085a88",
+      "x_u64_hex": "0641580884240266",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 67,
+      "w_u64_hex": "0020449a81542905",
+      "x_u64_hex": "45992645024191a0",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 68,
+      "w_u64_hex": "6249061428a0a942",
+      "x_u64_hex": "4125a582419958a9",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 69,
+      "w_u64_hex": "6a9991516a196448",
+      "x_u64_hex": "a8414488a9252a26",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 70,
+      "w_u64_hex": "a905505aa6650685",
+      "x_u64_hex": "2a9a06052841a960",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 71,
+      "w_u64_hex": "24511294a5818502",
+      "x_u64_hex": "6626914224aa6469",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 72,
+      "w_u64_hex": "60aaa91120195008",
+      "x_u64_hex": "a5425048660606a6",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 73,
+      "w_u64_hex": "6206681a60651245",
+      "x_u64_hex": "a0aa1285a1528520",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 74,
+      "w_u64_hex": "a9520a54aa82a142",
+      "x_u64_hex": "2004a90221aa5029",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 75,
+      "w_u64_hex": "19aa85511a2a6888",
+      "x_u64_hex": "6a50280828049266",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 76,
+      "w_u64_hex": "5414149a1546aa05",
+      "x_u64_hex": "aaa88a4556506160",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 77,
+      "w_u64_hex": "9660961454924902",
+      "x_u64_hex": "1508454296a828a9",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 78,
+      "w_u64_hex": "9288511190200448",
+      "x_u64_hex": "145515881114aa26",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 79,
+      "w_u64_hex": "1114205a12489685",
+      "x_u64_hex": "5081940550614a20",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 80,
+      "w_u64_hex": "5861a09419945592",
+      "x_u64_hex": "9219520258890569",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 81,
+      "w_u64_hex": "98894a9155002518",
+      "x_u64_hex": "196521489a1594a6",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 82,
+      "w_u64_hex": "1615091a8459a055",
+      "x_u64_hex": "1582a085156156a0",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 83,
+      "w_u64_hex": "0641985402a56252",
+      "x_u64_hex": "541a4a82458a2529",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 84,
+      "w_u64_hex": "4199566142010198",
+      "x_u64_hex": "826609088026a066",
+      "expected": -13,
+      "actual": -13
+    },
+    {
+      "case": 85,
+      "w_u64_hex": "882615aa49598815",
+      "x_u64_hex": "0292984582426260",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 86,
+      "w_u64_hex": "0842a42488a65a12",
+      "x_u64_hex": "492856420a9a01a9",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 87,
+      "w_u64_hex": "069a622104021958",
+      "x_u64_hex": "4844158849288826",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 88,
+      "w_u64_hex": "4526016a466aa495",
+      "x_u64_hex": "8490a40585445a00",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 89,
+      "w_u64_hex": "815080a4a1866692",
+      "x_u64_hex": "0628620200901949",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 90,
+      "w_u64_hex": "20a85aa1a1102518",
+      "x_u64_hex": "414501482208a486",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 91,
+      "w_u64_hex": "6a04192a28688055",
+      "x_u64_hex": "a1a181856a546680",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 92,
+      "w_u64_hex": "6a50986468844252",
+      "x_u64_hex": "a8095892a9a12609",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": 93,
+      "w_u64_hex": "a5a96861a6101198",
+      "x_u64_hex": "28551a1824098146",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 94,
+      "w_u64_hex": "240526aa21499915",
+      "x_u64_hex": "66a2995524554040",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 95,
+      "w_u64_hex": "6061452421952812",
+      "x_u64_hex": "a10a285262a19289",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 96,
+      "w_u64_hex": "a28104215821aa58",
+      "x_u64_hex": "a156a698a11a5906",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 97,
+      "w_u64_hex": "991a826a9a496555",
+      "x_u64_hex": "2882451519662800",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 98,
+      "w_u64_hex": "1566516416960492",
+      "x_u64_hex": "5a1a04125882aa49",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 99,
+      "w_u64_hex": "548210a115228618",
+      "x_u64_hex": "96648258561a6546",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 100,
+      "w_u64_hex": "901aaa2a505a5115",
+      "x_u64_hex": "1580515596640480",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 101,
+      "w_u64_hex": "9244692490a61052",
+      "x_u64_hex": "1018109211808609",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 102,
+      "w_u64_hex": "199008611a00a298",
+      "x_u64_hex": "5064aa1858285106",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 103,
+      "w_u64_hex": "592886aa49586995",
+      "x_u64_hex": "9a91691598441040",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 104,
+      "w_u64_hex": "844445a445a42812",
+      "x_u64_hex": "192909528691a289",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 105,
+      "w_u64_hex": "0691152184008a58",
+      "x_u64_hex": "4549849806296a86",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 106,
+      "w_u64_hex": "0229906a02614a65",
+      "x_u64_hex": "4495469541452900",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 107,
+      "w_u64_hex": "415562644a8915a2",
+      "x_u64_hex": "8222151280918849",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 108,
+      "w_u64_hex": "88a121a189159428",
+      "x_u64_hex": "0a4a9058880a4a46",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 109,
+      "w_u64_hex": "080a882a84616625",
+      "x_u64_hex": "49a662550a561580",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 110,
+      "w_u64_hex": "46564a04248a2162",
+      "x_u64_hex": "8502219245a29409",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 111,
+      "w_u64_hex": "61a209416216a0a8",
+      "x_u64_hex": "84588818850a6606",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 112,
+      "w_u64_hex": "a10a948aa24242a5",
+      "x_u64_hex": "22a44a1520542140",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 113,
+      "w_u64_hex": "28645684a99a0922",
+      "x_u64_hex": "6200095222a0a089",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 114,
+      "w_u64_hex": "6a80250128249868",
+      "x_u64_hex": "a95894986a104296",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 115,
+      "w_u64_hex": "a618604a64401a65",
+      "x_u64_hex": "a8851695a5688910",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 116,
+      "w_u64_hex": "a5640244a698a5a2",
+      "x_u64_hex": "2411a61224855859",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 117,
+      "w_u64_hex": "2181818121246428",
+      "x_u64_hex": "6669615860111856",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 118,
+      "w_u64_hex": "5019490a11512625",
+      "x_u64_hex": "a18500656269a690",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 119,
+      "w_u64_hex": "9a45180458a98262",
+      "x_u64_hex": "111282a299856519",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 120,
+      "w_u64_hex": "9a919a41960541a8",
+      "x_u64_hex": "186a492819222416",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 121,
+      "w_u64_hex": "152a698a165110a5",
+      "x_u64_hex": "56861825544a8250",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 122,
+      "w_u64_hex": "5446248451aa9a22",
+      "x_u64_hex": "96229a6254964199",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 123,
+      "w_u64_hex": "9092860150065928",
+      "x_u64_hex": "114869a892221096",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 124,
+      "w_u64_hex": "1a22450a98622865",
+      "x_u64_hex": "509424a511489a10",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 125,
+      "w_u64_hex": "095800440a8aa6a2",
+      "x_u64_hex": "5820862259945919",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 126,
+      "w_u64_hex": "45a49281451445a8",
+      "x_u64_hex": "8a48452888202856",
+      "expected": -14,
+      "actual": -14
+    },
+    {
+      "case": 127,
+      "w_u64_hex": "8400518a45600425",
+      "x_u64_hex": "069500658658a690",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 128,
+      "w_u64_hex": "0258280480889262",
+      "x_u64_hex": "450192a202a54599",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 129,
+      "w_u64_hex": "42a5aa4100145168",
+      "x_u64_hex": "405952a841010416",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 130,
+      "w_u64_hex": "4901494a4a4110a5",
+      "x_u64_hex": "80a5292588599050",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 131,
+      "w_u64_hex": "885905848999aa22",
+      "x_u64_hex": "0a02a86208a55259",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 132,
+      "w_u64_hex": "24858401a5256a08",
+      "x_u64_hex": "49524a6806021196",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 133,
+      "w_u64_hex": "6612560a20450945",
+      "x_u64_hex": "85aa05a5656aa810",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 134,
+      "w_u64_hex": "626a114462928882",
+      "x_u64_hex": "a0164422a1862a19",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 135,
+      "w_u64_hex": "a1866081aa2a1688",
+      "x_u64_hex": "2260162820128956",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 136,
+      "w_u64_hex": "2812229a29469505",
+      "x_u64_hex": "6a8891652a684890",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 137,
+      "w_u64_hex": "6468891424a25442",
+      "x_u64_hex": "a91460a26a841699",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 138,
+      "w_u64_hex": "a694485164082248",
+      "x_u64_hex": "246022a8a5109516",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 139,
+      "w_u64_hex": "a1200a5a9254a185",
+      "x_u64_hex": "2489892525485450",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 140,
+      "w_u64_hex": "1148959411a04002",
+      "x_u64_hex": "6225486250952269",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 141,
+      "w_u64_hex": "5895541119080a08",
+      "x_u64_hex": "91410a685a21a1a6",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 142,
+      "w_u64_hex": "9a21261a58559945",
+      "x_u64_hex": "199996a59a414020",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 143,
+      "w_u64_hex": "1649a15496815882",
+      "x_u64_hex": "1826552215990829",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 144,
+      "w_u64_hex": "15a5419116191688",
+      "x_u64_hex": "5442240854269a66",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 145,
+      "w_u64_hex": "5002009a5165a605",
+      "x_u64_hex": "969aa245905259a0",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 146,
+      "w_u64_hex": "905a8a1449826542",
+      "x_u64_hex": "1106418292aa14a9",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 147,
+      "w_u64_hex": "0aa65951881a0048",
+      "x_u64_hex": "595000880906a626",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 148,
+      "w_u64_hex": "0902185a06668285",
+      "x_u64_hex": "48a88a0549506560",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 149,
+      "w_u64_hex": "4558aa9446925182",
+      "x_u64_hex": "8604594284a80069",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 150,
+      "w_u64_hex": "8084659181281808",
+      "x_u64_hex": "06501848060482a6",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 151,
+      "w_u64_hex": "0014241a80449a45",
+      "x_u64_hex": "41a9aa85026051a0",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 152,
+      "w_u64_hex": "4a60865408906942",
+      "x_u64_hex": "8015658241891829",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 153,
+      "w_u64_hex": "498941516a282488",
+      "x_u64_hex": "8861040888159a66",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 154,
+      "w_u64_hex": "a515909aa5454605",
+      "x_u64_hex": "0a89464524612960",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 155,
+      "w_u64_hex": "2461521425a10502",
+      "x_u64_hex": "651602422689a4a9",
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "case": 156,
+      "w_u64_hex": "62992a1120099048",
+      "x_u64_hex": "a562918862164426",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 157,
+      "w_u64_hex": "a226a95a62555085",
+      "x_u64_hex": "a08a5005a1420620",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 158,
+      "w_u64_hex": "a9426894aaa21292",
+      "x_u64_hex": "22262a02289a9169",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "case": 159,
+      "w_u64_hex": "289a0691250aa918",
+      "x_u64_hex": "6a44a948682650a6",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 160,
+      "w_u64_hex": "6426851a14566855",
+      "x_u64_hex": "a5906885664012a0",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 161,
+      "w_u64_hex": "9640545450860a52",
+      "x_u64_hex": "24280682a598a929",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 162,
+      "w_u64_hex": "91a8126192128998",
+      "x_u64_hex": "1044850811246866",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 163,
+      "w_u64_hex": "1904a1aa1a685415",
+      "x_u64_hex": "5291544550500a60",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 164,
+      "w_u64_hex": "5850602459841612",
+      "x_u64_hex": "9a0912429aa989a9",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 165,
+      "w_u64_hex": "96a92a2154109558",
+      "x_u64_hex": "1955a1889a055426",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 166,
+      "w_u64_hex": "1605896a94686095",
+      "x_u64_hex": "54a1600515511600",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 167,
+      "w_u64_hex": "115148a402952292",
+      "x_u64_hex": "540a280250a99549",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 168,
+      "w_u64_hex": "418916a141218118",
+      "x_u64_hex": "92568a4890066186",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 169,
+      "w_u64_hex": "8815962a89494855",
+      "x_u64_hex": "01a249858a662080",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 170,
+      "w_u64_hex": "0a62656488951852",
+      "x_u64_hex": "491a149209828209",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 171,
+      "w_u64_hex": "468a206106229a98",
+      "x_u64_hex": "88649618451a4946",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 172,
+      "w_u64_hex": "4516a2aa424a5515",
+      "x_u64_hex": "8680655584641840",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 173,
+      "w_u64_hex": "8062412481a62412",
+      "x_u64_hex": "0218205202809a89",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 174,
+      "w_u64_hex": "0098882188026658",
+      "x_u64_hex": "4164629802181506",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 175,
+      "w_u64_hex": "6a245a6a28580155",
+      "x_u64_hex": "888101154944a400",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 176,
+      "w_u64_hex": "a540196466a48092",
+      "x_u64_hex": "a8198812a9916649",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 177,
+      "w_u64_hex": "a598a8a1a5004218",
+      "x_u64_hex": "26455a5824290146",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 178,
+      "w_u64_hex": "2029662a21581915",
+      "x_u64_hex": "6591195566458080",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 179,
+      "w_u64_hex": "6245252420859852",
+      "x_u64_hex": "a12aa89262915209",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 180,
+      "w_u64_hex": "aaa1846168116a98",
+      "x_u64_hex": "20466418a9291906",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 181,
+      "w_u64_hex": "a90942aaaa692595",
+      "x_u64_hex": "2892261528469940",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 182,
+      "w_u64_hex": "145612a415858412",
+      "x_u64_hex": "6a2a855264a26889",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 183,
+      "w_u64_hex": "54a2912155124458",
+      "x_u64_hex": "a5544098560a2686",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 184,
+      "w_u64_hex": "920a686a506a0265",
+      "x_u64_hex": "15a0129591568500",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 185,
+      "w_u64_hex": "12562a649a8691a2",
+      "x_u64_hex": "5008911211a04449",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 186,
+      "w_u64_hex": "19a0a9a11a225028",
+      "x_u64_hex": "5a54685858080246",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 187,
+      "w_u64_hex": "5818442a55482225",
+      "x_u64_hex": "9aa42a559a549180",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 188,
+      "w_u64_hex": "946406045498a962",
+      "x_u64_hex": "1501a99296805009",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 189,
+      "w_u64_hex": "02809541802448a8",
+      "x_u64_hex": "5469441815192206",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 190,
+      "w_u64_hex": "4119508a02400aa5",
+      "x_u64_hex": "508506154065a940",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 191,
+      "w_u64_hex": "4965228449998522",
+      "x_u64_hex": "8211955280814889",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 192,
+      "w_u64_hex": "8881a10189055468",
+      "x_u64_hex": "096a50980a190a96",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 193,
+      "w_u64_hex": "0629684a84511665",
+      "x_u64_hex": "4986a09506668510",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 194,
+      "w_u64_hex": "46468a4406a961a2",
+      "x_u64_hex": "8412621245921559",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 195,
+      "w_u64_hex": "41924a8142062028",
+      "x_u64_hex": "864a2958802a9456",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 196,
+      "w_u64_hex": "802a150aa1528025",
+      "x_u64_hex": "02948865004a6290",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 197,
+      "w_u64_hex": "2846940429aa4a62",
+      "x_u64_hex": "41204aa26a942119",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 198,
+      "w_u64_hex": "6a906641241609a8",
+      "x_u64_hex": "a948152869208016",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 199,
+      "w_u64_hex": "a508218a666098a5",
+      "x_u64_hex": "24949425a5484a50",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 200,
+      "w_u64_hex": "a554a084a2885622",
+      "x_u64_hex": "2621666224a40999",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 201,
+      "w_u64_hex": "20a0420121142528",
+      "x_u64_hex": "625921a862019896",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 202,
+      "w_u64_hex": "6a09010a6860a465",
+      "x_u64_hex": "a1a5a0a562595610",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 203,
+      "w_u64_hex": "aa559844588942a2",
+      "x_u64_hex": "28014222a9a52519",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 204,
+      "w_u64_hex": "15a15a81962501a8",
+      "x_u64_hex": "285a01281801a456",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 205,
+      "w_u64_hex": "1519298a15418025",
+      "x_u64_hex": "56a69865545a4290",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 206,
+      "w_u64_hex": "506aa40451995a62",
+      "x_u64_hex": "950258a292860199",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 207,
+      "w_u64_hex": "9286644150261968",
+      "x_u64_hex": "116a2aa891128116",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 208,
+      "w_u64_hex": "1a12064a9a42a9a5",
+      "x_u64_hex": "5084a525196a5850",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 209,
+      "w_u64_hex": "196a81841a9a6422",
+      "x_u64_hex": "5a10646258841a59",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 210,
+      "w_u64_hex": "5484500145060608",
+      "x_u64_hex": "9a6806689410a996",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 211,
+      "w_u64_hex": "8420120a80508545",
+      "x_u64_hex": "158481a506686410",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 212,
+      "w_u64_hex": "0248994480a84082",
+      "x_u64_hex": "4011502201940619",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 213,
+      "w_u64_hex": "419428810a049288",
+      "x_u64_hex": "8049922841214556",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 214,
+      "w_u64_hex": "4921aa9a4a505105",
+      "x_u64_hex": "8a99596588490090",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 215,
+      "w_u64_hex": "8449451485a12042",
+      "x_u64_hex": "0a2528a20a959299",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 216,
+      "w_u64_hex": "069504510419aa48",
+      "x_u64_hex": "4542aaa806215116",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 217,
+      "w_u64_hex": "4201965a20654985",
+      "x_u64_hex": "849a4525454a2050",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 218,
+      "w_u64_hex": "a15a519462810802",
+      "x_u64_hex": "0026056280a6aa69",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 219,
+      "w_u64_hex": "a8a61011a91a8608",
+      "x_u64_hex": "2252946828024aa6",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 220,
+      "w_u64_hex": "2802a01a29665545",
+      "x_u64_hex": "69a852a56a5a0920",
+      "expected": -2,
+      "actual": -2
+    },
+    {
+      "case": 221,
+      "w_u64_hex": "665a6a5424821582",
+      "x_u64_hex": "a904112265a48429",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 222,
+      "w_u64_hex": "a6a40991662aa088",
+      "x_u64_hex": "2450a008a5005666",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 223,
+      "w_u64_hex": "a110889aa2446205",
+      "x_u64_hex": "26a86a45205815a0",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 224,
+      "w_u64_hex": "2068561419900142",
+      "x_u64_hex": "620509826288a0a9",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 225,
+      "w_u64_hex": "5884155158288848",
+      "x_u64_hex": "a9518888aa156226",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 226,
+      "w_u64_hex": "9a11945a54444a85",
+      "x_u64_hex": "1889560599610160",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 227,
+      "w_u64_hex": "1569629496911982",
+      "x_u64_hex": "5415154215898869",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 228,
+      "w_u64_hex": "1185219111099408",
+      "x_u64_hex": "5662944854154aa6",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 229,
+      "w_u64_hex": "5021801a51556645",
+      "x_u64_hex": "918a6285926219a0",
+      "expected": -10,
+      "actual": -10
+    },
+    {
+      "case": 230,
+      "w_u64_hex": "9a4a425498a12542",
+      "x_u64_hex": "11162182928a9429",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 231,
+      "w_u64_hex": "1a9619519a0a8088",
+      "x_u64_hex": "5862810819266666",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 232,
+      "w_u64_hex": "4522989a06564205",
+      "x_u64_hex": "9898404554422660",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 233,
+      "w_u64_hex": "4442181445a28102",
+      "x_u64_hex": "86249a42849841a9",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": 234,
+      "w_u64_hex": "8098a611811a5948",
+      "x_u64_hex": "0540598802240026",
+      "expected": -9,
+      "actual": -9
+    },
+    {
+      "case": 235,
+      "w_u64_hex": "0224655a80641885",
+      "x_u64_hex": "4198180501408220",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 236,
+      "w_u64_hex": "495004940a80aa92",
+      "x_u64_hex": "8025a60249985969",
+      "expected": -5,
+      "actual": -5
+    },
+    {
+      "case": 237,
+      "w_u64_hex": "89a8829146186518",
+      "x_u64_hex": "8a416548880518a6",
+      "expected": -10,
+      "actual": -10
+    },
+    {
+      "case": 238,
+      "w_u64_hex": "8405511a85642455",
+      "x_u64_hex": "06a904850651aaa0",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 239,
+      "w_u64_hex": "2451105420818652",
+      "x_u64_hex": "4505828246a96529",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 240,
+      "w_u64_hex": "62a99a6120194198",
+      "x_u64_hex": "8052510861052466",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 241,
+      "w_u64_hex": "a90569aa6a451015",
+      "x_u64_hex": "20aa1045a0528660",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 242,
+      "w_u64_hex": "a9622824a9919212",
+      "x_u64_hex": "2a0a9a4228aa41a9",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 243,
+      "w_u64_hex": "248a862125226158",
+      "x_u64_hex": "695669886a161026",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 244,
+      "w_u64_hex": "6616456a644a2895",
+      "x_u64_hex": "a580290566629200",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "case": 245,
+      "w_u64_hex": "a26214a46296aa92",
+      "x_u64_hex": "24188402a1886249",
+      "expected": -1,
+      "actual": -1
+    },
+    {
+      "case": 246,
+      "w_u64_hex": "118890a192224918",
+      "x_u64_hex": "6264464820142986",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 247,
+      "w_u64_hex": "1814522a19580555",
+      "x_u64_hex": "628015855860a880",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 248,
+      "w_u64_hex": "5840216458a49452",
+      "x_u64_hex": "991990929a884a09",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 249,
+      "w_u64_hex": "9698a86154005698",
+      "x_u64_hex": "1965521895250546",
+      "expected": -8,
+      "actual": -8
+    },
+    {
+      "case": 250,
+      "w_u64_hex": "15254aaa92582115",
+      "x_u64_hex": "5491215515419440",
+      "expected": -3,
+      "actual": -3
+    },
+    {
+      "case": 251,
+      "w_u64_hex": "5141092412a4a012",
+      "x_u64_hex": "5229a85250915689",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": 252,
+      "w_u64_hex": "5099942159016258",
+      "x_u64_hex": "92460a9892292106",
+      "expected": -6,
+      "actual": -6
+    },
+    {
+      "case": 253,
+      "w_u64_hex": "9a25166a88698955",
+      "x_u64_hex": "199289151a466000",
+      "expected": -7,
+      "actual": -7
+    },
+    {
+      "case": 254,
+      "w_u64_hex": "0652956484854892",
+      "x_u64_hex": "582a541209922249",
+      "expected": -4,
+      "actual": -4
+    },
+    {
+      "case": 255,
+      "w_u64_hex": "45aa60a106111a18",
+      "x_u64_hex": "84461658440a8946",
+      "expected": -5,
+      "actual": -5
+    }
+  ]
+}
